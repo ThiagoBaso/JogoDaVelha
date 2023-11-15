@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Playpen Sans', cursive;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00a8e8;
+    flex-direction: column;
+
+    .placarContainer { 
+        width: 615px;
+        height: 200px;
+        margin-bottom: 100px;
+        display: flex;
+        background-color: #007aaa;
+
+        .placar {
+            width: 410px;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .pd {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-size: 28px;
+        }
+
+        .res {
+            width: 205px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            img {
+                width: 100px;
+            }
+
+            p {
+                font-size: 30px;
+            }
+        }
+    }
+
+    .tabuleiro {
+        display: grid;
+        grid-template-columns: 200px 200px 200px;
+        grid-template-rows: 200px 200px 200px;
+        border: solid black 1px;
+
+        .local {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: solid black 1px;
+            cursor: pointer;
+            font-size: 80px;
+            font-weight: 700;
+        }
+    }
+}
+
+ 
