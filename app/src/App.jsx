@@ -30,23 +30,29 @@ const App = () => {
         }
         
         setBoard(NewBoard)
-        CheckWin()
 
-        if(jogada){
-          setJogada(false)
-          root.style.setProperty('--p1', 'transparent');
-          root.style.setProperty('--p2', '#005b96');
-        }else{
-          setJogada(true)
-          root.style.setProperty('--p1', '#005b96');
-          root.style.setProperty('--p2', 'transparent');
+        if(!CheckWin()){
+          toggle()
         }
+      }
+    }
+
+    const toggle = () => {
+      if(jogada){
+        setJogada(false)
+        root.style.setProperty('--p1', 'transparent');
+        root.style.setProperty('--p2', '#005b96');
+      }else{
+        setJogada(true)
+        root.style.setProperty('--p1', '#005b96');
+        root.style.setProperty('--p2', 'transparent');
       }
     }
 
     const Restart = () => {
       setBoard(InitBoard)
       setPause(false)
+      toggle()
     }
 
     const CheckWin = () => {
@@ -67,6 +73,8 @@ const App = () => {
           }else{
             setPp2(pp2+1)
           }
+
+          return true
         }
       }
     }
@@ -75,6 +83,7 @@ const App = () => {
     <div className="container">
       <div className="placarContainer">
         <div className="placar">
+          
           <div className="pd">
             <p>Player 1 - X</p>
             <p>Vitorias: {pp1}</p>
