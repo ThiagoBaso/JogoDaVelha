@@ -107,6 +107,7 @@ const App = () => {
           </div>
         )}
       </div>
+      <p className="me">By ThiagoBaso</p>
     </div>
   )
 }

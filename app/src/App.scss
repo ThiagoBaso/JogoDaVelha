@@ -27,16 +27,15 @@
     flex-direction: column;
 
     .placarContainer { 
-        width: 615px;
-        height: 200px;
-        margin-bottom: 100px;
+        //width: 615px;
+        //height: 200px;
+        //margin-bottom: 100px;
         display: flex;
-        background-color: transparent;
         font-family: 'Roboto', sans-serif;
         gap: 5px;
 
         .placar {
-            width: 410px;
+            //width: 410px;
             height: 100%;
             display: flex;
             flex-direction: row;
@@ -50,10 +49,9 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            font-size: 28px;
-            font-weight: 600;
             //background-color: #005b96;
             border-radius: 20px;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
         }
 
         .pd:first-child {
@@ -64,7 +62,7 @@
         }
 
         .res {
-            width: 205px;
+            //width: 205px;
             height: 100%;
             display: flex;
             align-items: center;
@@ -72,24 +70,15 @@
             flex-direction: column;
             background-color: #005b96;
             border-radius: 20px;
-
-            img {
-                width: 100px;
-            }
-
-            p {
-                font-size: 30px;
-                font-weight: 600;
-            }
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
         }
     }
 
     .tabuleiro {
         display: grid;
-        grid-template-columns: 200px 200px 200px;
-        grid-template-rows: 200px 200px 200px;
         border: solid black 1px;
         font-family: 'Playpen Sans', cursive;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 20px 40px, rgba(0, 0, 0, 0.3) 0px 70px 130px -30px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 
         .local {
             width: 100%;
@@ -103,6 +92,85 @@
             font-weight: 700;
         }
     }
+
+    .me {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin: 20px;
+        font-weight: 600;
+        font-size: 12px;
+        font-family: 'Roboto', sans-serif;
+    }
 }
 
- 
+@media only screen and (max-width: 830px) {
+    .tabuleiro {
+        display: grid;
+        grid-template-columns: 100px 100px 100px;
+        grid-template-rows: 100px 100px 100px;
+    }
+
+    .placarContainer {
+        width: 315px;
+        height: 100px;
+        margin-bottom: 50px;
+
+        .placar {
+            width: 210px;
+
+            .pd {
+                font-weight: 600;
+            }
+        }
+
+        .res {
+            width: 105px;
+
+            img {
+                width: 50px;
+            }
+
+            p {
+                font-weight: 600;
+            }
+        }
+    }
+
+  }
+
+@media only screen and (min-width: 830px) {
+    .tabuleiro {
+        display: grid;
+        grid-template-columns: 200px 200px 200px;
+        grid-template-rows: 200px 200px 200px;
+    }
+
+    .placarContainer {
+        width: 615px;
+        height: 200px;
+        margin-bottom: 100px;
+
+        .placar {
+            width: 410px;
+
+            .pd {
+                font-size: 28px;
+                font-weight: 600;
+            }
+        }
+
+        .res {
+            width: 205px;
+
+            img {
+                width: 100px;
+            }
+
+            p {
+                font-size: 30px;
+                font-weight: 600;
+            }
+        }
+    }
+}
